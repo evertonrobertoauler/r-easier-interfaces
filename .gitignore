@@ -6,3 +6,5 @@
 # *~
 *.pyc
 *.idea
+/rcpp/rcpp/dist/
+/rcpp/rcpp/build/
