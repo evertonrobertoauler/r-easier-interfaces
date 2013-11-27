@@ -1,8 +1,8 @@
 #include <Rcpp.h>
 #include <cstdlib>
 #include <iostream>
-#include <omp.h> 
-
+#include <omp.h>
+ 
 using namespace std;
 
 RcppExport SEXP multiplicacaoMatrizes(SEXP x, SEXP y){
