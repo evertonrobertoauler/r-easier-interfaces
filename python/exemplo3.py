@@ -1,10 +1,11 @@
 from rpy2 import robjects as r
 
+r.globalenv['i'] = r.IntVector([1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5])
+
 r.r('''
     library('lattice')
     library('Matrix')
 
-    i <- c(1,1,2,2,3,3,3,4,4,4,5,5,5)
     j <- c(2,5,1,2,2,3,4,1,4,5,3,4,5)
     x <- c(3,1,4,1,5,9,2,6,5,3,5,8,9)
     
@@ -13,7 +14,6 @@ r.r('''
     v = matrix(data=(1:5), nrow=5, ncol=1)
     u <- AS %*% v
     A <- as.matrix(AS)
-
 ''')
 
 print(r.globalenv['AS'])
